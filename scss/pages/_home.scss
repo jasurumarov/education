@@ -1,0 +1,605 @@
+@use '../abstracts' as *;
+
+.home-page {
+    main {
+        .hero-section {
+            max-width: 1360px;
+            margin: 0 auto;
+            margin-top: 122px;
+            padding-top: 65px;
+            background: url("../../images/home/hero-bg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+            &-content {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 60px;
+                    .hero-left {
+                        max-width: 611px;
+                        h1 {
+                            color: #FFF;
+                            font-family: Rubik700;
+                            font-size: 64px;
+                            line-height: 88px;
+                            margin-bottom: 24px;
+                        }
+                        p {
+                            color: #FFF;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 27px;
+                            margin-bottom: 66px;
+                            font-family: Montserrat; 
+                        }
+                        label {
+                            position: relative;
+                            input {
+                                background: url("../../images/home/hero-left-search.svg");
+                                background-color: #FFF;
+                                background-position: 16px;
+                                border: none;
+                                border-radius: 8px;
+                                background-repeat: no-repeat;
+                                padding: 24px 136px 24px 56px;
+                                width: 100%;
+                                color: $color-second;
+                                font-family: Montserrat;
+                                font-size: 16px;
+                                line-height: 27px;
+                                &::placeholder {
+                                    color: #808080;
+                                }
+                            }
+                            button {
+                                border: 1px solid $color-first;
+                                border-radius: 8px;
+                                background: $color-first;
+                                padding: 12px 32px;
+                                color: #FFF;
+                                font-family: Montserrat600;
+                                font-size: 16px;
+                                line-height: 32px; 
+                                cursor: pointer;
+                                transition: .3s;
+                                position: absolute;
+                                right: 16px;
+                                bottom: -20px;
+                                &:hover {
+                                    color: $color-first;
+                                    background: #FFF;
+                                }
+                            }
+                        }
+                        .hero-left-benefits {
+                            margin-top: 56px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            gap: 48px;
+                            div {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 8px;
+                                h3 {
+                                    color: #FFF;
+                                    font-variant-numeric: lining-nums proportional-nums;
+                                    font-family: Rubik700;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                    }
+                    .hero-right {
+                        margin-bottom: -4px;
+                    }
+            }
+        }
+        .courses-section {
+            margin-top: 88px;
+            margin-bottom: 160px;
+            &-content {
+                h2 {
+                    color: $color-second;
+                    text-align: center;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-family: Rubik700;
+                    font-size: 48px;
+                    line-height: 63.984px;
+                    margin-bottom: 56px;
+                }   
+                .courses-card-part {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .courses-card-headings  {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 24px;
+                        button {
+                            border-radius: 8px;
+                            background: transparent;
+                            width: 167px;
+                            padding: 8px 0;
+                            color: #AAA;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;
+                            cursor: pointer;
+                            &:focus {
+                                background: $color-first;
+                                color: #FFF;
+                            }
+                        }
+
+                    }
+                    .courses-card-group {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 6px;
+                        .courses-card {
+                            margin-top: 32px;
+                            width: 295px;
+                            padding: 16px;
+                            cursor: pointer;
+                            border-radius: 8px;
+                            transition: .3s;
+                            &-img {
+                                width: 100%;
+                                height: 208px;
+                                background: $color-fifth;
+                                border-radius: 4px;
+                            }
+                            .courses-card-img-bottom-container {
+                                display: flex;
+                                justify-content: center;
+                                .courses-card-img-bottom {
+                                    display: inline-block;
+                                    padding: 4px 24px;
+                                    border-radius: 8px;
+                                    background: $color-seventh;
+                                    color: #FFF;
+                                    font-family: Montserrat600;
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                    margin-top: -20px;
+                                    margin-bottom: 16px;
+                                }
+                            }
+                            h3 {
+                                color: $color-second;
+                                font-variant-numeric: lining-nums proportional-nums;
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 24px;
+                                text-transform: capitalize;
+                                margin-bottom: 8px;
+                            }
+                            h4 {
+                                color: var(--Primary-Pink, #F72585);
+                                font-family: Montserrat600;
+                                font-size: 12px;
+                                line-height: 24px;
+                                margin-bottom: 8px;
+                            }
+                            .courses-card-rating {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                margin-bottom: 16px;
+                                p {
+                                    color: #808080;
+                                    font-family: Montserrat600;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                }
+                            }
+                            .courses-card-pricing {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                p {
+                                    color: $color-fifth;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 27px;
+                                    text-decoration: line-through;
+                                }
+                                h5 {
+                                    color: $color-second;
+                                    font-size: 24px;
+                                    font-weight: 600;
+                                    line-height: 32px;
+                                }
+                            }
+                            &:hover {
+                                box-shadow: rgba(0, 0, 0, 0.09) 30px 30px 40px;
+                            }
+                        }
+                    }
+                    .courses-moreBtn {
+                        margin-top: 56px;
+                        width: 288px;
+                        padding: 14px 24px;
+                        border-radius: 8px;
+                        background: $color-first;
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Montserrat600;
+                        font-size: 16px;
+                        line-height: 32px;
+                        border: 1px solid $color-first;
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover {
+                            background: #FFF;
+                            color: $color-first;
+                        }
+                    }
+                }
+            }
+        }
+        .categories-section {
+            margin-bottom: 160px;
+            &-content {
+                h2 {
+                    color: $color-second;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-family: Rubik700;
+                    font-size: 46px;
+                    line-height: 63.984px;
+                    margin-bottom: 56px;
+                }
+                .categories-cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+                    div {
+                        width: 288px;
+                        height: 350px;
+                        border-radius: 8px;
+                        background: #666666;
+                        padding-bottom: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        cursor: pointer;
+                        h3 {
+                            color: #FFF;
+                            font-size: 24px;
+                            font-weight: 600;
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+        .about-section {
+            padding: 40px 0;
+            &-content {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 176px;
+                .about-card {
+                    text-align: center;
+                    h3 {
+                        margin-bottom: 8px;
+                        margin-top: 16px;
+                        color: $color-second;
+                        font-family: Rubik700;
+                        font-size: 32px;
+                        font-weight: 300;
+                        line-height: 46px;
+                        text-transform: capitalize;
+                    }
+                    p {
+                        color: $color-second;
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 30px;               
+                    }
+                }
+            } 
+        }
+        .mentor-section {
+            padding: 160px 0;
+            &-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 56px;
+                .mentor-left {
+                    max-width: 608px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .mentor-right {
+                    h2 {
+                        color: $color-second;
+                        font-family: Rubik700;
+                        font-size: 48px;
+                        line-height: 63.984px;      
+                        margin-bottom: 32px;               
+                    }
+                    p {
+                        margin-bottom: 24px;
+                        max-width: 565px;
+                        color: #808080;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 27px;                        
+                    }
+                    button {
+                        margin-top: 16px;
+                        padding: 16px 40px; 
+                        background: $color-first;
+                        border-radius: 8px;
+                        color: #FFF;
+                        font-family: Montserrat600;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 32px;
+                        border: 1px solid $color-first;
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover {
+                            background: #FFF;
+                            color: $color-first;
+                        }
+                    }
+                }
+            }
+        }
+        .study-section {
+            padding: 64px 0 27px 0;
+            .owl-carousel {
+                position:  !important;
+                .study-section-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 48px;
+                    .study-left {
+                        img {
+                            // width: 100%;
+                        }
+                    }
+                    .study-right {
+                        max-width: 672px;
+                        p {
+                            color: $color-second;
+                            font-size: 32px;
+                            line-height: 48px; 
+                            margin-bottom: 32px;                     
+                        }
+                        h3 {
+                            color: $color-second;
+                            font-size: 24px;
+                            font-weight: 600;
+                            line-height: 32px;
+                            margin-bottom: 8px;
+                        }
+                        h5 {
+                            color: #808080;
+                            font-family: Montserrat600;
+                            font-size: 14px;
+                            line-height: 24px;       
+                        }
+                    }
+                }
+                .owl-nav {
+                    .owl-prev {
+                        width: 24px;
+                        height: 24px;
+                        position: absolute !important;
+                        left: -10px;
+                        top: 190px;
+                        font-size: 24px;
+                        color: $color-second;
+                        &:hover {
+                            background: none;
+                            color: $color-second;
+                        }
+                    }
+                    .owl-next {
+                        width: 24px;
+                        height: 24px;
+                        position: absolute !important;
+                        right: 0;
+                        top: 190px;
+                        bottom: 0;
+                        font-size: 24px;
+                        color: $color-second;
+                        &:hover {
+                            background: none;
+                            color: $color-second;
+                        }
+                    }
+                }
+            }
+        }
+        .company-section {
+            padding: 160px 0;
+            &-content {
+                h2 {
+                    color: $color-second;
+                    font-family: Rubik700;
+                    font-size: 46px;
+                    line-height: 63.984px;   
+                    text-align: center;      
+                    margin-bottom: 56px;           
+                }
+                .company-icons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 56px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1368px) {
+    .home-page {
+        main {
+            .mentor-section {
+                &-content {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1231px) {
+    .home-page {
+        main {
+            .hero-section {
+                background: $color-third;
+                border-radius: 0;
+                padding-bottom: 65px;
+                .hero-right {
+                    order: -1;
+                }
+                .hero-left {
+                    text-align: center;
+                    .hero-left-benefits {
+                        justify-content: center;
+                    }
+                }
+            }
+            .categories-section {
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1127px) {
+    .study-section {
+        &-content {
+            gap: 20px !important;
+            .study-right {
+                p {
+                    font-size: 20px !important;
+                    line-height: 28px !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 861px) {
+    .study-section {
+        &-content {
+            flex-wrap: wrap;
+            .study-left {
+                padding-right: 34px;
+                img {
+                    width: 100%;
+                }
+            }
+            .study-right {
+                max-width: 400px !important;
+                text-align: center;
+            }
+        }
+    }   
+}
+
+@media (max-width: 572px) {
+    .home-page {
+        main {
+            .hero-section {
+                .hero-left {
+                    h1 {
+                        font-size: 48px;
+                        line-height: 66px;
+                    }
+                    label {
+                        input {
+                            padding: 24px 152px 24px 56px;
+                        }
+                    }
+                }
+                .hero-right {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .courses-section {
+                h2 {
+                    font-size: 34px;
+                }
+            }
+            .about-section {
+                &-content {
+                    flex-direction: column;
+                    gap: 100px;
+                }
+            }
+            .mentor-section {
+                &-content {
+                    .mentor-right {
+                        h2 {
+                            font-size: 40px;
+                            line-height: 44px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 438px) {
+    .home-page {
+        main {
+            .hero-section {
+                .hero-left {
+                    h1 {
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+                    label {
+                        input {
+                            padding: 24px 152px 24px 56px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 438px) {
+    .home-page {
+        main {
+            .categories-section {
+                &-content {
+                    h2 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
