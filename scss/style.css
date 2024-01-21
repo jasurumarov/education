@@ -732,6 +732,7 @@ body footer .footer-content .footer-bottom p {
   text-align: center;
 }
 .home-page main .about-section {
+  position: relative;
   padding: 40px 0;
 }
 .home-page main .about-section-content {
@@ -759,6 +760,12 @@ body footer .footer-content .footer-bottom p {
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
+}
+.home-page main .about-section-content img {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  z-index: -1;
 }
 .home-page main .mentor-section {
   padding: 160px 0;
