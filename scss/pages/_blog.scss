@@ -168,3 +168,15 @@
         }
     }
 }
+
+@media (max-width: 404px) {
+    .blog-page {
+        main {
+            .hero-section {
+                h1 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}

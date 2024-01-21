@@ -2814,6 +2814,11 @@ body footer .footer-content .footer-bottom p {
     line-height: 36px !important;
   }
 }
+@media (max-width: 404px) {
+  .blog-page main .hero-section h1 {
+    font-size: 36px;
+  }
+}
 .account-page main .hero-section {
   padding-top: 442px;
   background: #666666;
