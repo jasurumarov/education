@@ -1,3 +1,773 @@
+@use '../themes' as *;
+@use '../abstracts' as *;
+
 .courses-page {
-    
+    main {
+        margin-top: 122px;
+        .courses-section {
+            padding-top: 16px;
+            margin-bottom: 160px;
+            &-content {
+                // position: relative !important;
+                .courses-title {
+                    max-width: 738px;
+                    .courses-links {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        a:first-child {
+                            color: #808080;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;
+                        }
+                        a:last-child {
+                            color: $color-second;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;
+                        }
+                        a {
+                            &:hover {
+                                color: rgb(72, 67, 67);
+                            }
+                        }
+                    }
+                    h1 {
+                        color: $color-second;
+                        font-family: Rubik700;
+                        font-size: 64px;
+                        line-height: 88px;     
+                        font-weight: 300;    
+                        margin: 24px 0;        
+                    }
+                    p {
+                        color: #808080;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        line-height: 27px;   
+                        margin-bottom: 56px;                   
+                    }
+                    h2 {
+                        color: $color-second;
+                        font-family: Rubik700;
+                        font-size: 32px;
+                        line-height: 48px;
+                        text-transform: capitalize;                        
+                    }
+                }
+                .owl-carousel {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center !important;
+                    gap: 6px;
+                    .courses-card {
+                        margin-top: 32px;
+                        width: 295px;
+                        padding: 16px;
+                        cursor: pointer;
+                        border-radius: 8px;
+                        transition: .3s;
+                        &-img {
+                            width: 100%;
+                            height: 208px;
+                            background: $color-fifth;
+                            border-radius: 4px;
+                        }
+                        .courses-card-img-bottom-container {
+                            display: flex;
+                            justify-content: center;
+                            .courses-card-img-bottom {
+                                display: inline-block;
+                                padding: 4px 24px;
+                                border-radius: 8px;
+                                background: $color-seventh;
+                                color: #FFF;
+                                font-family: Montserrat600;
+                                font-size: 12px;
+                                line-height: 24px;
+                                margin-top: -20px;
+                                margin-bottom: 16px;
+                            }
+                        }
+                        h3 {
+                            color: $color-second;
+                            font-variant-numeric: lining-nums proportional-nums;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 24px;
+                            text-transform: capitalize;
+                            margin-bottom: 8px;
+                        }
+                        h4 {
+                            color: var(--Primary-Pink, #F72585);
+                            font-family: Montserrat600;
+                            font-size: 12px;
+                            line-height: 24px;
+                            margin-bottom: 8px;
+                        }
+                        .courses-card-rating {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            margin-bottom: 16px;
+                            p {
+                                color: #808080;
+                                font-family: Montserrat600;
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+                        }
+                        .courses-card-pricing {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            p {
+                                color: $color-fifth;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 27px;
+                                text-decoration: line-through;
+                            }
+                            h5 {
+                                color: $color-second;
+                                font-size: 24px;
+                                font-weight: 600;
+                                line-height: 32px;
+                            }
+                        }
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.09) 30px 30px 40px;
+                        }
+                    }
+                    .owl-nav {
+                        .owl-prev {
+                            background: none;
+                            position: absolute !important; 
+                            left: -60px;
+                            top: 190px; 
+                            color: $color-second;
+                        }
+                        .owl-next {
+                            background: none !important;
+                            position: absolute !important;
+                            right: -60px;
+                            top: 190px;
+                        }
+                    }
+                }
+            }
+        }
+        .topics-section {
+            margin-bottom: 160px;
+            &-content {
+                .topics-title {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 40px;
+                    margin-bottom: 56px;
+                    .topics-seeAllBtn {
+                        width: 288px;
+                        padding: 14px 24px;
+                        border-radius: 8px;
+                        background: $color-first;
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Montserrat600;
+                        font-size: 16px;
+                        line-height: 32px;
+                        border: 1px solid $color-first;
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover {
+                            background: #FFF;
+                            color: $color-first;
+                        }
+                    }
+                    h2 {
+                        color: $color-second;
+                        font-family: Rubik700;
+                        font-size: 46px;
+                        line-height: 63.984px;
+                    }
+                }
+                .topics-cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+                    div {
+                        width: 288px;
+                        height: 350px;
+                        border-radius: 8px;
+                        background: #a3a3a3;
+                        padding-bottom: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        cursor: pointer;
+                        h3 {
+                            color: #FFF;
+                            font-size: 24px;
+                            font-weight: 600;
+                            line-height: 32px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .all-section {
+            margin-bottom: 160px;
+            &-content {
+                .all-title {
+                    margin-bottom: 56px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 30px;
+                    h2 {
+                        color: $color-second;
+                        font-family: Rubik700;
+                        font-size: 46px;
+                        line-height: 63.984px;                   
+                    }
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 40px;
+                        button:first-child {
+                            padding: 16px 40px;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            background: #FFF5F9;
+                            border-radius: 8px; 
+                            color: $color-first;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;  
+                            cursor: pointer;                  
+                        }
+                        button:last-child {
+                            cursor: pointer;
+                            padding: 16px 40px;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            background: $color-first;
+                            border-radius: 8px;
+                            border: 1px solid $color-first;
+                            color: #FFF;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px; 
+                            transition: .3s all;  
+                            svg {
+                                fill: white;
+                            } 
+                            &:hover {
+                                background: #FFF;
+                                color: $color-first;
+                                svg {
+                                    fill: #F72585;
+                                    transition: .3s all;
+                                }
+                            }                  
+                        }
+                    }
+                }
+                .all-bottom {
+                    display: flex;
+                    gap: 32px;
+                    aside {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 36px;
+                        .aside-content {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            .aside-title {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 116px;
+                                h3 {
+                                    color: $color-second;
+                                    font-family: Rubik700;
+                                    font-size: 24px;
+                                    line-height: 32px;                               
+                                }
+                                svg {
+                                    cursor: pointer;
+                                }
+                            }
+                            div {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 8px;
+                                input {
+                                    width: 20px;
+                                    height: 20px;  
+                                    border-color: $color-fifth;     
+                                    outline: none;                          
+                                }
+                                h5 {
+                                    color: $color-second;
+                                    font-family: Montserrat600;
+                                    font-size: 14px;
+                                    line-height: 24px;                                 
+                                }
+                                h6 {
+                                    color: #808080;
+                                    font-family: Montserrat600;
+                                    font-size: 14px;
+                                    line-height: 24px;                             
+                                }
+                            }
+                        }
+                        .aside-line {
+                            width: 237px;
+                            height: 1px;
+                            background: $color-fifth;
+                        }
+                        .aside-content2 {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 24px;
+                            .aside-title {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 90px;
+                                h3 {
+                                    color: $color-second;
+                                    font-family: Rubik700;
+                                    font-size: 24px;
+                                    line-height: 32px;                               
+                                }
+                                svg {
+                                    cursor: pointer;
+                                }
+                            }
+                            div {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 8px;
+                                input {
+                                    width: 20px;
+                                    height: 20px;  
+                                    border-color: $color-fifth;     
+                                    outline: none;                          
+                                }
+                                h5 {
+                                    color: $color-second;
+                                    font-family: Montserrat600;
+                                    font-size: 16px;
+                                    line-height: 32px;                                 
+                                }
+                                h6 {
+                                    color: #808080;
+                                    font-family: Montserrat600;
+                                    font-size: 14px;
+                                    line-height: 24px;                             
+                                }
+                            }
+                            a {
+                                margin-top: -4px;
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                color: $color-second;
+                                font-family: Montserrat600;
+                                font-size: 16px;
+                                line-height: 32px;                         
+                            }
+                        }
+                        .aside-content2 {
+                            .aside-title3 {
+                                gap: 76px !important;
+                            }
+                            .aside-title4 {
+                                gap: 148px !important;
+                            }
+                            .aside-title6 {
+                                gap: 148px !important;
+                            }
+                            .aside-title7 {
+                                gap: 100px !important;
+                            }
+                        }
+                    }
+                    .all-courses-line {
+                        background: $color-fifth;
+                        width: 1px;
+                        height: 1680px;
+                    }
+                    article {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 0px;
+                        .courses-card {
+                            margin-top: 32px;
+                            width: 295px;
+                            padding: 16px;
+                            cursor: pointer;
+                            border-radius: 8px;
+                            transition: .3s;
+                            &-img {
+                                width: 100%;
+                                height: 208px;
+                                background: $color-fifth;
+                                border-radius: 4px;
+                            }
+                            .courses-card-img-bottom-container {
+                                display: flex;
+                                justify-content: center;
+                                .courses-card-img-bottom {
+                                    display: inline-block;
+                                    padding: 4px 24px;
+                                    border-radius: 8px;
+                                    background: $color-seventh;
+                                    color: #FFF;
+                                    font-family: Montserrat600;
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                    margin-top: -20px;
+                                    margin-bottom: 16px;
+                                }
+                            }
+                            h3 {
+                                color: $color-second;
+                                font-variant-numeric: lining-nums proportional-nums;
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 24px;
+                                text-transform: capitalize;
+                                margin-bottom: 8px;
+                            }
+                            h4 {
+                                color: var(--Primary-Pink, #F72585);
+                                font-family: Montserrat600;
+                                font-size: 12px;
+                                line-height: 24px;
+                                margin-bottom: 8px;
+                            }
+                            .courses-card-rating {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                margin-bottom: 16px;
+                                p {
+                                    color: #808080;
+                                    font-family: Montserrat600;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                }
+                            }
+                            .courses-card-pricing {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                p {
+                                    color: $color-fifth;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 27px;
+                                    text-decoration: line-through;
+                                }
+                                h5 {
+                                    color: $color-second;
+                                    font-size: 24px;
+                                    font-weight: 600;
+                                    line-height: 32px;
+                                }
+                            }
+                            &:hover {
+                                box-shadow: rgba(0, 0, 0, 0.09) 30px 30px 40px;
+                            }
+                        }
+                    }
+                }
+                .all-page {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    svg {
+                        cursor: pointer;
+                    }
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        button {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 4px;
+                            color: $color-fifth;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;   
+                            cursor: pointer;                                                   
+                        }
+                        button:first-child {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 4px;
+                            background: $color-first;
+                            color: #FFF;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;   
+                            cursor: pointer;                                                   
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1334px) {
+    .courses-page {
+        main {
+            .courses-section {
+                .owl-carousel {
+                    .owl-nav {
+                        .owl-prev {
+                            bottom: -400px !important;
+                            left: 45%;
+                        }
+                        .owl-next {
+                            bottom: -400px !important;
+                            right: 45%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .courses-page {
+        main {
+            .courses-section {
+                .owl-carousel {
+                    .owl-nav {
+                        .owl-prev {
+                            bottom: -400px !important;
+                            left: 35%;
+                        }
+                        .owl-next {
+                            bottom: -400px !important;
+                            right: 35%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 848px) {
+    .courses-page {
+        main {
+            .courses-section {
+                &-content {
+                    .courses-title {
+                        h1 {
+                            font-size: 48px;
+                        }
+                        h2 {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+            .topics-section {
+                &-content {
+                    .topics-title {
+                        justify-content: center;
+                        h2 {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 754px) {
+    .courses-page {
+        main {
+            .all-section {
+                &-content {
+                    .all-title {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .courses-page {
+        main {
+            .all-section {
+                &-content {
+                    .all-bottom {
+                        flex-direction: column;
+                        .all-courses-line {
+                            display: none;
+                        }
+                        aside {
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 566px) {
+    .courses-page {
+        main {
+            .courses-section {
+                &-content {
+                    .courses-title {
+                        h1 {
+                            font-size: 36px;
+                            text-align: center;
+                            line-height: 38px;
+                        }
+                        p {
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
+                        h2 {
+                            font-size: 24px;
+                            text-align: center;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 456px) {
+    .courses-page {
+        main {
+            .topics-section {
+                &-content {
+                    .topics-title {
+                        h2 {
+                            font-size: 34px;
+                        }
+                        button {
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+            .all-section {
+                &-content {
+                    .all-title {
+                        div {
+                            gap: 8px;
+                            button:first-child {
+                                padding: 10px 20px;
+                                display: flex;
+                                align-items: center;
+                                gap: 6px;
+                                background: #FFF5F9;
+                                border-radius: 8px; 
+                                color: $color-first;
+                                font-family: Montserrat600;
+                                font-size: 14px;
+                                line-height: 32px;  
+                                cursor: pointer;                  
+                            }
+                            button:last-child {
+                                cursor: pointer;
+                                padding: 10px 20px;
+                                display: flex;
+                                align-items: center;
+                                gap: 6px;
+                                background: $color-first;
+                                border-radius: 8px;
+                                border: 1px solid $color-first;
+                                color: #FFF;
+                                font-family: Montserrat600;
+                                font-size: 14px;
+                                line-height: 32px; 
+                                transition: .3s all;  
+                                svg {
+                                    fill: white;
+                                } 
+                                &:hover {
+                                    background: #FFF;
+                                    color: $color-first;
+                                    svg {
+                                        fill: #F72585;
+                                        transition: .3s all;
+                                    }
+                                }                  
+                            }
+                        }
+                    }
+                }
+            }
+            .courses-section {
+                .owl-carousel {
+                    .owl-nav {
+                        .owl-prev {
+                            bottom: -400px !important;
+                            left: 25%;
+                        }
+                        .owl-next {
+                            bottom: -400px !important;
+                            right: 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 394px) {
+    .courses-page {
+        main {
+            .topics-section {
+                &-content {
+                    .topics-title {
+                        h2 {
+                            font-size: 34px;
+                            text-align: center;
+                            line-height: 40px;
+                        }
+                        button {
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

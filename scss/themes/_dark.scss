@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+
+
+.dark  {
+    background: #021934;
+    header {
+        background: #021934;
+        .logo {
+            svg {
+                fill: white;
+            }
+        }
+        .nav-lastLink {
+            border: 1px solid white !important;
+        }
+        .dark-mode {
+            border-color: white !important;
+            fill: white !important;
+        }
+        #search {
+            border-color: white;
+        }
+        
+    }
+    .topics-seeAllBtn {
+        &:hover {
+            color: $color-first !important;
+        }
+    }
+    .all-title {
+        div {
+            button:first-child {
+                color: $color-first !important;
+            }
+            button:last-child {
+                &:hover {
+                    color: $color-first !important;
+                }
+            }
+        }
+    }
+    main {
+        .hero-section {
+            button {
+                &:hover {
+                    color: $color-first !important;
+                }
+            }
+        }
+        .courses-section {
+            .courses-moreBtn {
+                &:hover {
+                    color: $color-first !important;
+                }
+            }
+        }
+        .mentor-section {
+            button {
+                &:hover {
+                    color: $color-first !important;
+                }
+            }
+        }
+    }
+}
+  
+.dark  * {
+  color: white !important;
+}
+
+.menu-opened + .dark {
+    .nav-list {
+        background: #021934 !important;
+    }
+}

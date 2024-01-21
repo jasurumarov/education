@@ -15,22 +15,46 @@ menuBtn.addEventListener("click", function () {
     document.body.classList.toggle("menu-opened")
 });
 
-// OWL CAROUSEL 
 
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        dots: false,
-        nav: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 1,
-          },
-          1000: {
-            items: 1,
-          },
-        },
-      });
+// NAVBAR SHRINK /////////////////////////////
+
+window.addEventListener("scroll", function () {
+  shrink();
+});
+
+let navbar = document.getElementById("navbar");
+
+function shrink() {
+  if (scrollY > 100) {
+    navbar.classList.add("navbar-shrink");
+  } else {
+    navbar.classList.remove("navbar-shrink");
+  }
+}
+
+// BACKTOP
+
+window.addEventListener('scroll', function () {
+  toggleBacktop();
+});
+
+let backtop = document.getElementById('backtop');
+
+function toggleBacktop() {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    backtop.style.bottom = '20px';
+  } else {
+    backtop.style.bottom = '-60px';
+  }
+}
+
+// DARK MODE 
+
+let modeBtn = document.getElementById("light-dark");
+
+modeBtn.addEventListener("click", function () {
+  document.body.classList.toggle("dark");
+});

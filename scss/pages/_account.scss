@@ -1,3 +1,223 @@
+@use '../abstracts' as *;
+
 .account-page {
-  
+    main {
+        .hero-section {
+            padding-top: 442px;
+            background: #666666;
+        }
+        .profile-section {
+            margin-top: 48px;
+            margin-bottom: 64px;
+            &-content {
+                display: flex;
+                align-items: center;
+                gap: 34px;
+                flex-wrap: wrap;
+                .profile-name {
+                    h3 {
+                        color: $color-second;
+                        font-family: Rubik700;
+                        font-weight: 300;
+                        font-size: 32px;
+                        line-height: 48px;
+                        text-transform: capitalize;    
+                        margin-bottom: 8px;                    
+                    }
+                    p {
+                        color: #808080;                        
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        text-transform: capitalize;                        
+                    }
+                }
+            }
+        }
+        .courses-cards {
+            &-content {
+                .courses-cards-title {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 200px;
+                    margin-bottom: 40px;
+                    .courses-cards-title-active {
+                        cursor: pointer;
+                        h4 {
+                            border-bottom: 5px solid $color-first;
+                            color: $color-second;
+                            font-size: 32px;
+                            font-weight: 600;
+                            line-height: 48px;       
+                            height: 62px;
+
+                        }
+                    }
+                    .courses-cards-title {
+                        &:hover {
+                            border-bottom: 5px solid $color-first;
+                            transition: .1s;
+                            color: $color-second;
+                        }
+                        cursor: pointer;
+                        height: 60px;
+                        color: #808080;
+                        font-size: 32px;
+                        font-weight: 400;
+                        line-height: 48px;                        
+                    }
+                }
+                .courses-card-group {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    margin-bottom: 160px;
+                    .courses-card {
+                        margin-top: 32px;
+                        width: 295px;
+                        padding: 16px;
+                        cursor: pointer;
+                        border-radius: 8px;
+                        transition: .3s;
+                        &-img {
+                            width: 100%;
+                            height: 208px;
+                            background: $color-fifth;
+                            border-radius: 4px;
+                        }
+                        .courses-card-img-bottom-container {
+                            display: flex;
+                            justify-content: center;
+                            .courses-card-img-bottom {
+                                display: inline-block;
+                                padding: 4px 24px;
+                                border-radius: 8px;
+                                background: $color-seventh;
+                                color: #FFF;
+                                font-family: Montserrat600;
+                                font-size: 12px;
+                                line-height: 24px;
+                                margin-top: -20px;
+                                margin-bottom: 16px;
+                            }
+                        }
+                        h3 {
+                            color: $color-second;
+                            font-variant-numeric: lining-nums proportional-nums;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 24px;
+                            text-transform: capitalize;
+                            margin-bottom: 8px;
+                        }
+                        h4 {
+                            color: var(--Primary-Pink, #F72585);
+                            font-family: Montserrat600;
+                            font-size: 12px;
+                            line-height: 24px;
+                            margin-bottom: 8px;
+                        }
+                        .courses-card-rating {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            margin-bottom: 16px;
+                            p {
+                                color: #808080;
+                                font-family: Montserrat600;
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+                        }
+                        .courses-card-pricing {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            p {
+                                color: $color-fifth;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 27px;
+                                text-decoration: line-through;
+                            }
+                            h5 {
+                                color: $color-second;
+                                font-size: 24px;
+                                font-weight: 600;
+                                line-height: 32px;
+                            }
+                        }
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.09) 30px 30px 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 596px) {
+    .account-page {
+        main {
+            .profile-section {
+                &-content {
+                    justify-content: center;
+                    gap: 14px !important;
+                    .profile-name {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h3 {  
+                            text-align: center;                 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 946px) {
+    .account-page {
+        main {
+            .courses-cards {
+                margin-top: 100px !important;
+                &-content {
+                    .courses-cards-title {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 60px !important;
+                        .courses-cards-title-active {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            h4 {
+                                color: $color-second;
+                                font-size: 32px;
+                                font-weight: 600;
+                                line-height: 48px;                            
+                            }
+                            div {
+                                width: 178px;
+                                height: 5px;
+                                border-radius: 22px;
+                                background: $color-first !important;
+                            }
+                        }
+                        .courses-cards-title {
+                            color: #808080;
+                            font-size: 32px;
+                            font-weight: 400;
+                            line-height: 48px;                        
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

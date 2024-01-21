@@ -1,2 +1,170 @@
+@use '../abstracts' as *;
+
 .blog-page {
+    main {
+        .hero-section {
+            padding-top: 138px;
+            padding-bottom: 120px;
+            background: #666666;
+            &-content {
+                div {
+                    margin-bottom: 64px;
+                    a {
+                        color: #E6E6E6;
+                        font-family: Montserrat600;
+                        font-size: 16px;
+                        line-height: 32px;        
+                        &:hover {
+                            color: #fff;
+                        }         
+                    }
+                    a:last-child {
+                        color: #fff;
+                    }
+                }
+                h1 {
+                    color: #fff;
+                    font-family: Rubik700;
+                    font-size: 64px;
+                    font-weight: 300;
+                    line-height: 88px;  
+                }
+            }
+        }
+        .power-section {
+            margin-top: 96px;
+            margin-bottom: 160px;
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 56px;
+                .power-part {
+                    display: flex;
+                    // flex-wrap: wrap;
+                    align-items: center;
+                    gap: 64px;
+                    .power-left {
+                        width: 608px;
+                        height: 517px;
+                        background: $color-fifth;
+                    }
+                    .power-right {
+                        h2 {
+                            color: $color-second;
+                            font-variant-numeric: lining-nums proportional-nums;
+                            font-family: Rubik700;
+                            font-size: 32px;
+                            max-width: 500px;
+                            line-height: 48px;
+                            text-transform: capitalize;  
+                        }
+                        div {
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            margin: 16px 0;
+                            h3 {
+                                color: #808080;
+                                font-family: Montserrat600;
+                                font-size: 14px;
+                                line-height: 24px;                                
+                            }
+                        }
+                        p {
+                            max-width: 552px;
+                            color: #808080;
+                            font-family: Montserrat;
+                            font-size: 16px;
+                            line-height: 27px;                           
+                        }
+                        button {
+                            margin-top: 72px;
+                            padding: 12px 32px; 
+                            border-radius: 8px; 
+                            border: 1px solid $color-first;
+                            background: $color-first !important;
+                            color: #FFF !important;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;     
+                            transition: .3s;
+                            cursor: pointer;
+                            &:hover {
+                                background: #FFF !important;
+                                color: $color-first !important;
+                            }                        
+                        }
+                    }
+                }
+                .blog-page {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    svg {
+                        cursor: pointer;
+                    }
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        button {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 4px;
+                            color: $color-fifth;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;   
+                            cursor: pointer;                                                   
+                        }
+                        button:first-child {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 4px;
+                            background: $color-first;
+                            color: #FFF;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            line-height: 32px;   
+                            cursor: pointer;                                                   
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1084px) {
+    .blog-page {
+        main {
+            .power-section {
+                .power-part {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                    button {
+                        margin-top: 48px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 502px) {
+    .blog-page {
+        main {
+            .power-section {
+                .power-part {
+                    h2 {
+                        font-size: 30px !important;
+                        line-height: 36px !important;
+                    }
+                }
+            }
+        }
+    }
 }

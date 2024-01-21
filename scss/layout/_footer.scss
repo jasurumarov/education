@@ -1,0 +1,120 @@
+@use '../abstracts' as *;
+
+body {
+    footer {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        border-radius: 8px;
+        padding: 80px 68px 40px 68px;
+        background: #021934;
+        max-width: 1360px;
+        .footer-content {
+            .footer-top {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 120px;
+                .footer-left {
+                    max-width: 500px;
+                    p {
+                        margin-top: 36px;
+                        color: #FFF;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        line-height: 27px;                        
+                    }
+                }
+                .footer-right {
+                    display: flex;
+                    gap: 100px;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        h3 {
+                            color: #FFF;
+                            font-family: Rubik;
+                            font-size: 24px;
+                            line-height: 32px;    
+                            margin-bottom: 16px;
+                        }
+                        a {
+                            color: #FFF;
+                            font-family: Montserrat600;
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 32px;
+                            &:hover {
+                                color: $color-fifth;
+                                transition: .2s;
+                            }                              
+                        }                      
+                    }
+                }
+            }
+            .footer-bottom {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 40px;
+                }
+                p {
+                    color: #FFF;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    line-height: 27px;          
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1342px) {
+    footer {
+        border-radius: 0px !important;
+        max-width: 100%;
+        .footer-content {
+            .footer-top {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 864px) {
+    footer {
+        .footer-top {
+            .footer-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 512px) {
+    footer {
+        .footer-bottom {
+            gap: 20px;
+            div {
+                text-align: center;
+                gap: 0 !important;
+                flex-direction: column;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
